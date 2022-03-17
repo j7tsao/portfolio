@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/511d08ad1c.js" crossorigin="anonymous"></script>
-        <script src="script.js" defer></script>
+        <!-- <script src="script.js" defer></script> -->
     </head>
     <body>
         <header>
@@ -19,11 +19,11 @@
             <a href="#home" class="logo">Jason Yuchi tsao</a>
             <nav class="topNav">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#certificate">Certificate</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="about"><a href="#about">About</a></li>
+                    <li class="works"><a href="#works">Works</a></li>
+                    <li class="certificate"><a href="#certificate">Certificate</a></li>
+                    <li class="resume"><a href="#resume">Resume</a></li>
+                    <li class="contact"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <!-- Hamburger menu toggle button -->
@@ -52,7 +52,7 @@
         </section>
 
         <!-- About -->
-        <section class="about" id="about">
+        <section class="about-section" id="about">
             <div class="about-me">
                 <div class="avatar-block">
                     <img class="avatar" src="assets/avatar.jpg" alt="Head shot for about me section" />
@@ -65,7 +65,7 @@
         </section>
 
         <!-- Works -->
-        <section class="works" id="works">
+        <section class="works-section" id="works">
             <!-- <h2>Works</h2> -->
             <div class="works-block">
                 <div class="card card1">
@@ -175,7 +175,7 @@
         </section>
 
         <!-- certificate -->
-        <section class="certificate" id="certificate">
+        <section class="certificate-section" id="certificate">
             <div class="cert-wrapper">
                 <div class="center-line">
                     <span class="scroll-icon"><i class="fas fa-caret-up"></i></span>
@@ -231,7 +231,7 @@
             </div>
         </section>
         <!-- resume -->
-        <section class="resume" id="resume">
+        <section class="resume-section" id="resume">
             <div class="resume-wrapper">
                 <div class="download-resume">
                     <a href="assets/Jtsao_CV.pdf" target="_blank"><i class="fa-solid fa-angles-down"></i>Download</a>
@@ -253,7 +253,7 @@
             </div>
         </section>
         <!-- contact -->
-        <section class="contact" id="contact">
+        <section class="contact-section" id="contact">
             <div class="contact-wrapper">
                 <p class="greeting">Feel free to contact me.</p>
                 <section class="contact-icons">
@@ -267,5 +267,6 @@
         <section class="footer" id="footer">
             <p class="copyright">Copyright &copy Jason Yuchi Tsao 2022</p>
         </section>
+        <script src="script.js"></script>
     </body>
 </html>

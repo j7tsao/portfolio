@@ -5,6 +5,31 @@ window.addEventListener('scroll', () => {
 
 })
 
+// Highlight Nav Menu on scroll 
+const sections = document.querySelectorAll("#about, #works, #certificate, #resume, #contact");
+const navLi = document.querySelectorAll("header .topNav ul li")
+
+// Note: "window.pageYOffset" is exactly the same as "scrollY"
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        // const sectionHeight = section.clientHeight;
+
+        if (window.pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    })
+    navLi.forEach(li => {
+        li.classList.remove('highlight');
+        if (li.classList.contains(current)) {
+            li.classList.add('highlight')
+        }
+    })
+})
+
+
 // hamburger menu toggle menu effect
 const toggleButton = document.querySelector('.toggle-button')
 const sideMenu = document.querySelector('.sideNav')

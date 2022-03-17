@@ -14,7 +14,7 @@ body {
     /* background-color: #1D212B; */
     background-color: #000;
     height: auto;
-    min-height: 790vh;
+    min-height: 810vh;
     margin: 0;
 }
 /* HEADER - NAVIGATION MENU */
@@ -76,6 +76,14 @@ header .topNav ul li a {
     letter-spacing: 2px;
     transition: 0.6s;
 }
+header .topNav ul li.highlight a {
+    color: #fff;
+    background-color: #ff5733;
+    padding: 10px 6.5px;
+    border-radius: 7px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
 header .topNav ul li:hover a {
     color: #1D212B;
     background-color: #f1f1f1;
@@ -130,7 +138,7 @@ header .sideNav {
 }
 
 /* ABOUT SECTION */
-.about {
+.about-section {
     position: relative;
     top: 0;
     left: 0;
@@ -141,7 +149,7 @@ header .sideNav {
     overflow: visible;
     margin-bottom: auto;
 }
-.about .about-me {
+.about-section .about-me {
     position: relative;
     top: 17vh;
     width: 80%;
@@ -152,12 +160,12 @@ header .sideNav {
     flex-direction: row;
     justify-content: space-evenly;
     transform: translateY(50%);
-    transition: all 1.2s ease-in-out;
+    transition: all 1s ease-in-out;
 }
-.about .about-me.show {
+.about-section .about-me.show {
     transform: translateY(0px);
 }
-.about .about-me .avatar-block {
+.about-section .about-me .avatar-block {
     position: relative;
     display: flex;
     justify-content: center;
@@ -166,7 +174,7 @@ header .sideNav {
     background-color: transparent;
     transition: all 2s ease;
 }
-.about .about-me .avatar {
+.about-section .about-me .avatar {
     position: relative;
     top: 0;
     left: 0;
@@ -182,7 +190,7 @@ header .sideNav {
     z-index: 1;
     transition: all 2s ease-in-out;
 }
-.about .about-me .text {
+.about-section .about-me .text {
     position: relative;
     background-color: rgba(212, 214, 214, 0.788);
     padding: 5rem 9rem 5rem 13rem;
@@ -192,7 +200,7 @@ header .sideNav {
     min-height: 45vh;
     transition: all 2s ease;
 }
-.about .about-me .text h2 {
+.about-section .about-me .text h2 {
     text-transform: uppercase;
     text-align: left;
     font-size: 1rem;
@@ -203,7 +211,7 @@ header .sideNav {
     /* color: #c70039; */
     /* color:rgba(119, 117, 117, 0.822) */
 }
-.about .about-me .text p {
+.about-section .about-me .text p {
     position: relative;
     text-align: justify;
     top: 1rem;
@@ -213,7 +221,7 @@ header .sideNav {
 }
 
 /* WORKS SECTION */
-.works {
+.works-section {
     position: relative;
     top: 0px;
     left: 0px;
@@ -221,7 +229,7 @@ header .sideNav {
     width: 100%;
     min-height: 300vh;
 }
-.works::before {
+.works-section::before {
     position: absolute;
     content: "works";
     left: 50%;
@@ -237,7 +245,7 @@ header .sideNav {
     /* color: #c70039; */
     /* color:rgba(119, 117, 117, 0.822) */
 }
-.works .works-block {
+.works-section .works-block {
     position: relative;
     top: 22vh;
     width: 80%;
@@ -250,18 +258,18 @@ header .sideNav {
     gap: 2.5em;
     transition: all 1.2s ease-in-out;
 }
-.works .works-block .card {
+.works-section .works-block .card {
     position: relative;
     width: 550px;
     height: 550px;
     transform-style: preserve-3d;
     transform: translateY(35%);
-    transition: all 1.3s ease-in-out;
+    transition: all 1s ease-in-out;
 }
-.works .works-block .card.show {
+.works-section .works-block .card.show {
     transform: translateY(0%);
 }
-.works .works-block .card .face {
+.works-section .works-block .card .face {
     position: absolute;
     top: 0;
     left: 0;
@@ -275,39 +283,39 @@ header .sideNav {
     transition: .8s ease-in-out;
     border: #fff 1em solid;
 }
-.works .works-block .card .face.front {
+.works-section .works-block .card .face.front {
     color: #333;
     transform-style: preserve-3d;
 }
-.works .works-block .card.card1 .face.front {
+.works-section .works-block .card.card1 .face.front {
     background-color: #e3e3e4;
     background-image: url(assets/pietro.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     color: #555;
 }
-.works .works-block .card.card2 .face.front {
+.works-section .works-block .card.card2 .face.front {
     background-color: #e3e3e4;
     background-image: url(assets/surf.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     color: #555;
 }
-.works .works-block .card.card3 .face.front {
+.works-section .works-block .card.card3 .face.front {
     background-color: #e3e3e4;
     background-image: url(assets/beachS.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     color: #555;
 }
-.works .works-block .card.card4 .face.front {
+.works-section .works-block .card.card4 .face.front {
     background-color: #e3e3e4;
     background-image: url(assets/diego.jpg);
     background-size: cover;
     background-blend-mode: overlay;
     color: #555;
 }
-.works .works-block .card.card5 .face.front {
+.works-section .works-block .card.card5 .face.front {
     background-color: #e3e3e4;
     background-image: url(assets/linkS.jpg);
     background-size: cover;
@@ -329,7 +337,7 @@ header .sideNav {
     border-radius: 10px;
     transform: translateZ(6em);
 }
-.works .works-block .card .face.front .card-title {
+.works-section .works-block .card .face.front .card-title {
     margin: 3rem;
     text-transform: uppercase;
     text-align: center;
@@ -339,27 +347,27 @@ header .sideNav {
     backface-visibility: hidden;
 }
 
-.works .works-block .card.turn .face.front {
+.works-section .works-block .card.turn .face.front {
     transform: rotateY(180deg);
 }
 
-.works .works-block .card .face.back {
+.works-section .works-block .card .face.back {
     color: #fff;
     background-color: #333;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     transform: perspective(500px) rotateY(180deg);
 }
-.works .works-block .card .face.back .prjs {
+.works-section .works-block .card .face.back .prjs {
     transform-style: preserve-3d;
     backface-visibility: hidden;
 }
-.works .works-block .card .face.back .prjs li {
+.works-section .works-block .card .face.back .prjs li {
     transform-style: preserve-3d;
     backface-visibility: hidden;
     list-style: none;
 }
-.works .works-block .card .face.back .prjs li a {
+.works-section .works-block .card .face.back .prjs li a {
     display: block;
     margin: 2rem;
     text-decoration: none;
@@ -380,10 +388,10 @@ header .sideNav {
     transition: .3s ease-in-out;
 }
 
-.works .works-block .card.turn .face.back {
+.works-section .works-block .card.turn .face.back {
     transform: rotateY(-360deg);
 }
-.works .works-block .card .flip {
+.works-section .works-block .card .flip {
     position: absolute;
     bottom: 1em;
     right: 1em;
@@ -392,7 +400,7 @@ header .sideNav {
     /* border-radius: 5px;
     background-color: rgba(255, 0, 0, 0.658); */
 }
-.works .works-block .card .flip .fa-circle-right {
+.works-section .works-block .card .flip .fa-circle-right {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -405,8 +413,8 @@ header .sideNav {
     transform: scale(1.2);
     transition: .3 ease-in-out;
 }
-.works .works-block .card .fa-free-code-camp,
-.works .works-block .card .fa-github {
+.works-section .works-block .card .fa-free-code-camp,
+.works-section .works-block .card .fa-github {
     position: absolute;
     top: 25%;
     /* transform: translate(-40%, -40%); */
@@ -417,7 +425,7 @@ header .sideNav {
 }
 
 /* CERTIFICATE SECTION */
-.certificate {
+.certificate-section {
     position: relative;
     top: 0px;
     left: 0px;
@@ -425,7 +433,7 @@ header .sideNav {
     min-height: 120vh;
     background-color: #fafafa;
 }
-.certificate::before {
+.certificate-section::before {
     position: absolute;
     content: "certificate";
     left: 50%;
@@ -567,7 +575,7 @@ header .sideNav {
 }
 
 /* RESUME SECTION */
-.resume {
+.resume-section {
     position: relative;
     top: 0px;
     left: 0px;
@@ -575,7 +583,7 @@ header .sideNav {
     width: 100%;
     min-height: 110vh;
 }
-.resume::before {
+.resume-section::before {
     position: absolute;
     content: "resume";
     left: 50%;
@@ -591,7 +599,7 @@ header .sideNav {
     /* color: #c70039; */
     /* color:rgba(119, 117, 117, 0.822) */
 }
-.resume .resume-wrapper {
+.resume-section .resume-wrapper {
     position: relative;
     top: 24vh;
     width: 100%;
@@ -602,13 +610,13 @@ header .sideNav {
     flex-wrap: wrap;
     /* border: black 2px solid; */
 }
-.resume .resume-wrapper .download-resume {
+.resume-section .resume-wrapper .download-resume {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 7rem;
 }
-.resume .resume-wrapper .download-resume a {
+.resume-section .resume-wrapper .download-resume a {
     display: flex;
     flex-direction: row;
     /* background-color: #eb9c8b; */
@@ -625,15 +633,15 @@ header .sideNav {
     width: auto;
     /* border-radius: 5px; */
 }
-.resume .resume-wrapper .download-resume a:hover {
+.resume-section .resume-wrapper .download-resume a:hover {
     color: #fff;
     background-color: #ff5733;
 }
-.resume .fa-angles-down {
+.resume-section .fa-angles-down {
     margin-right: 1rem;
     margin-top: 0.3rem;
 }
-.resume .resume-wrapper .award-board {
+.resume-section .resume-wrapper .award-board {
     position: relative;
     top: 10vh;
     display: flex;
@@ -642,7 +650,7 @@ header .sideNav {
     flex-wrap: wrap;
     width: 95%;
 }
-.resume .resume-wrapper .award-board .award-card {
+.resume-section .resume-wrapper .award-board .award-card {
     position: relative;
     background-color: #fff;
     padding: 2.5rem;
@@ -650,15 +658,15 @@ header .sideNav {
     width: 500px;
     transition: all 1s ease-in-out;
 }
-.resume .resume-wrapper .award-board .award-card .fa-award {
+.resume-section .resume-wrapper .award-board .award-card .fa-award {
     font-size: 2rem;
     color:#ff5733;
 }
-.resume .resume-wrapper .award-board .award-card a {
+.resume-section .resume-wrapper .award-board .award-card a {
     text-decoration: none;
 }
 
-.resume .resume-wrapper .award-board .award-card h3 {
+.resume-section .resume-wrapper .award-board .award-card h3 {
     text-decoration: none;
     letter-spacing: 2px;
     font-family: "Oswald", sans-serif;
@@ -666,14 +674,14 @@ header .sideNav {
     margin-top: 1rem;
     color: #333;
 }
-.resume .resume-wrapper .award-board .award-card p {
+.resume-section .resume-wrapper .award-board .award-card p {
     font-size: 1rem;
     letter-spacing: 1px;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
-.resume .resume-wrapper .award-board .award-card .read-more {
+.resume-section .resume-wrapper .award-board .award-card .read-more {
     position: absolute;
     left: 2.5rem;
     bottom: 1rem;
@@ -681,21 +689,21 @@ header .sideNav {
     background-color: #c70039;
     color: #fff;
 }
-.resume .resume-wrapper .award-board .award-card .read-more:hover {
+.resume-section .resume-wrapper .award-board .award-card .read-more:hover {
     color: #fff;
     background-color: #ff5733;
 }
 /* CONTACT SECTION */
-.contact {
+.contact-section {
     width: 100%;
     min-height: 80vh;
     background-color: #f1f1f1;
     /* border:rgba(248, 89, 61, 1) 2px solid; */
 }
-.contact .contact-wrapper {
+.contact-section .contact-wrapper {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     top: 0;
     left: 0;
     background-color: #444;
@@ -710,25 +718,25 @@ header .sideNav {
     justify-content: center;
     align-items: center;
 }
-.contact .contact-wrapper .greeting {
+.contact-section .contact-wrapper .greeting {
     color: white;
     font-size: 1.2rem;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
 }
-.contact .contact-wrapper .contact-icons {
+.contact-section .contact-wrapper .contact-icons {
     display: flex;
     justify-content: center;
 }
-.contact .contact-wrapper .contact-icons .fa-brands,
-.contact .contact-wrapper .contact-icons .fa-solid {
+.contact-section .contact-wrapper .contact-icons .fa-brands,
+.contact-section .contact-wrapper .contact-icons .fa-solid {
     color: white;
     font-size: 2rem;
     margin: 1.5rem;
 }
-.contact .contact-wrapper .contact-icons .fa-brands:hover,
-.contact .contact-wrapper .contact-icons .fa-solid:hover {
+.contact-section .contact-wrapper .contact-icons .fa-brands:hover,
+.contact-section .contact-wrapper .contact-icons .fa-solid:hover {
     color: #ff5733;
     transform: scale(1.2);
 }
@@ -769,18 +777,18 @@ header .sideNav {
 /* ----------------------------- */
 @media (max-width: 1290px) {
     /* ABOUT SECTION */
-    .about .about-me {
+    .about-section .about-me {
         position: relative;
         top: 17vh;
         width: 95%;
         min-height: 40vh;
     }
-    .about .about-me .avatar {
+    .about-section .about-me .avatar {
         width: 350px;
         height: auto;
         clip-path: circle(35%);
     }
-    .about .about-me .text {
+    .about-section .about-me .text {
         padding: 5rem 2rem 5rem 13rem;
         overflow: visible;
         margin-left: -12rem;
@@ -788,10 +796,10 @@ header .sideNav {
         transition: all 2s ease;
     }
     /* WORKS SECTION */
-    .works {
+    .works-section {
         min-height: 310vh;
     }
-    .works .works-block {
+    .works-section .works-block {
         position: relative;
         top: 22vh;
         width: 95%;
@@ -811,7 +819,7 @@ header .sideNav {
 }
 
 @media (max-width: 1210px) {
-    .works .works-block {
+    .works-section .works-block {
         position: relative;
         top: 22vh;
         width: 95%;
@@ -824,27 +832,27 @@ header .sideNav {
         gap: 1em;
         transition: all 1.2s ease-in-out;
     }
-    .works .works-block .card {
+    .works-section .works-block .card {
         position: relative;
         width: 500px;
         height: 500px;
     }
     /* RESUME SECTION */
-    .resume {
+    .resume-section {
         min-height: 180vh;
     }
-    .resume .resume-wrapper .award-board {
+    .resume-section .resume-wrapper .award-board {
         flex-direction: column;
     }
 }
 @media (max-width: 1090px) {
-    .works {
+    .works-section {
         min-height: 450vh;
     }
-    .works::before {
+    .works-section::before {
         font-size: 1.5rem;
     }
-    .works .works-block {
+    .works-section .works-block {
         position: relative;
         top: 22vh;
         width: 95%;
@@ -857,21 +865,21 @@ header .sideNav {
         gap: 1em;
         transition: all 1.2s ease-in-out;
     }
-    .works .works-block .card {
+    .works-section .works-block .card {
         position: relative;
         width: 550px;
         height: 550px;
     }
     /* CERTIFICATE SECTION */
-    .certificate::before {
+    .certificate-section::before {
         font-size: 1.5rem;
     }
     /* RESUME SECTION */
-    .resume::before {
+    .resume-section::before {
         font-size: 1.5rem;
     }
     /* CONTACT SECTION */
-    .contact .contact-wrapper .greeting {
+    .contact-section .contact-wrapper .greeting {
         font-size: 1rem;
     }
     /* FOOTER */
@@ -991,7 +999,7 @@ header .sideNav {
         right: 7%;
     }
     /* ABOUT SECTION */
-    .about {
+    .about-section {
         position: relative;
         top: 0;
         left: 0;
@@ -1001,7 +1009,7 @@ header .sideNav {
         overflow: visible;
         /* margin-bottom: auto; */
     }
-    .about .about-me {
+    .about-section .about-me {
         position: relative;
         top: 10vh;
         width: 90%;
@@ -1013,24 +1021,24 @@ header .sideNav {
         align-items: center;
         justify-content: center;
     }
-    .about .about-me .avatar-block {
+    .about-section .about-me .avatar-block {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: transparent;
     }
-    .about .about-me .avatar {
+    .about-section .about-me .avatar {
         width: 320px;
         height: auto;
         clip-path: circle(35%);
     }
-    .about .about-me .text {
+    .about-section .about-me .text {
         padding: 9rem 2rem 5rem 2rem;
         margin: -9rem auto 0 auto;
         width: 95%;
     }
-    .about .about-me .text p {
+    .about-section .about-me .text p {
         position: relative;
         text-align: left;
         top: 1rem;
@@ -1059,7 +1067,7 @@ header .sideNav {
     } */
     /* To compensate a strange gap caused by margin above */
     .certificate, 
-    .resume {
+    .resume-section {
         top: -32px;
     }
     .cert-wrapper .row section {
@@ -1090,60 +1098,60 @@ header .sideNav {
         font-size: 1em;
     }
     /* ABOUT SECTION */
-    .about {
+    .about-section {
         min-height: 100vh;
     }
-    .about .about-me .text {
+    .about-section .about-me .text {
         padding: 9rem 2rem 3rem 2rem;
         margin: -8rem auto 0 auto;
         width: 99%;
     }
-    .about .about-me .avatar {
+    .about-section .about-me .avatar {
         width: 260px;
         height: auto;
         clip-path: circle(35%);
     }
     /* WORK SECTION */
-    .works {
+    .works-section {
         min-height: 400vh;
     }
-    .works .works-block {
+    .works-section .works-block {
         width: 100%;
     }
-    .works .works-block .card {
+    .works-section .works-block .card {
         width: 500px;
         height: 500px;
     }
-    .works::before {
+    .works-section::before {
         font-size: 1.3rem;
     }
     /* CERTIFICATE SECTION */
-    .certificate {
+    .certificate-section {
         min-height: 130vh;
     }
-    .certificate::before {
+    .certificate-section::before {
         font-size: 1.3rem;
     }
     .row section .cert-link a {
         font-size: .9rem;
     }
     /* RESUME SECTION */
-    .resume::before {
+    .resume-section::before {
         font-size: 1.3rem;
     }
     .row section .details .cert-title,
     .row section .details .cert-date {
         font-size: .9rem;
     }
-    .resume .resume-wrapper .download-resume a {
+    .resume-section .resume-wrapper .download-resume a {
         font-size: .9rem;
     }
-    .resume .resume-wrapper .award-board .award-card {
+    .resume-section .resume-wrapper .award-board .award-card {
         width: 90%;
         margin: 2rem 0.5rem;
     }
     /* CONTACT SECTION */
-    .contact .contact-wrapper .greeting {
+    .contact-section .contact-wrapper .greeting {
         font-size: 0.9rem;
     }
     /* FOOTER */
@@ -1153,18 +1161,18 @@ header .sideNav {
 }
 
 @media (max-width: 510px) {
-    .works .works-block .card .fa-free-code-camp,
-    .works .works-block .card .fa-github {
+    .works-section .works-block .card .fa-free-code-camp,
+    .works-section .works-block .card .fa-github {
         font-size: 70px;
     }
-    .works .works-block .card .flip {
+    .works-section .works-block .card .flip {
         bottom: 0.5em;
         right: 0.5em;
     }
-    .works .works-block .card .flip .fa-circle-right {
+    .works-section .works-block .card .flip .fa-circle-right {
         font-size: 40px;
     }
-    .works .works-block .card .face.back .prjs li a {
+    .works-section .works-block .card .face.back .prjs li a {
         margin: 1.5rem;
         padding: .5rem;
     }
@@ -1179,23 +1187,23 @@ header .sideNav {
         font-size: 0.8em;
     }
     /* ABOUT SECTION */
-    .about {
+    .about-section {
         min-height: 90vh;
     }
-    .about .about-me .text h2 {
+    .about-section .about-me .text h2 {
         font-size: 0.8rem;
     }
-    .about .about-me .text p {
+    .about-section .about-me .text p {
         font-size: 0.8rem;
     }
     /* WORK SECTION */
-    .works .works-block .card .face.back .prjs li a {
+    .works-section .works-block .card .face.back .prjs li a {
         margin: 1rem;
         font-size: .9rem;
         padding: .5rem;
     }
     /* CERTIFICATE SECTION */
-    .certificate {
+    .certificate-section {
         min-height: 130vh;
     }
     .cert-wrapper .center-line,
@@ -1208,7 +1216,7 @@ header .sideNav {
         margin: 2rem 0;
     }
     /* RESUME SECTION */
-    .resume .resume-wrapper .award-board .award-card p {
+    .resume-section .resume-wrapper .award-board .award-card p {
         font-size: .8rem;
     }
 }
