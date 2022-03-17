@@ -15,7 +15,7 @@ body {
     background-color: #000;
     height: auto;
     min-height: 790vh;
-    
+    margin: 0;
 }
 /* HEADER - NAVIGATION MENU */
 header {
@@ -132,7 +132,7 @@ header .sideNav {
 /* ABOUT SECTION */
 .about {
     position: relative;
-    top: 0vh;
+    top: 0;
     left: 0;
     background-color: #fafafa;
     width: 100%;
@@ -188,7 +188,7 @@ header .sideNav {
     padding: 5rem 9rem 5rem 13rem;
     overflow: visible;
     margin-left: -12rem;
-    margin-bottom: auto;
+    /* margin-bottom: auto; */
     min-height: 45vh;
     transition: all 2s ease;
 }
@@ -242,7 +242,7 @@ header .sideNav {
     top: 22vh;
     width: 80%;
     min-height: 200vh;
-    margin: auto;
+    margin: 0 auto;
     /* border: green 2px solid; */
     display: flex;
     flex-wrap: wrap;
@@ -444,7 +444,7 @@ header .sideNav {
 .cert-wrapper {
     top: 24vh;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
     /* border: red 2px solid; */
 }
@@ -458,6 +458,7 @@ header .sideNav {
     transform: translateX(-50%);
 }
 .cert-wrapper .row {
+    position: relative;
     display: flex;
     
 }
@@ -769,7 +770,7 @@ header .sideNav {
     .about .about-me .text {
         padding: 5rem 2rem 5rem 13rem;
         overflow: visible;
-        margin: auto auto auto -12rem;
+        margin-left: -12rem;
         min-height: 45vh;
         transition: all 2s ease;
     }
@@ -782,7 +783,7 @@ header .sideNav {
         top: 22vh;
         width: 95%;
         min-height: 200vh;
-        margin: auto;
+        margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
         flex-wrap: wrap;
@@ -802,7 +803,7 @@ header .sideNav {
         top: 22vh;
         width: 95%;
         min-height: 200vh;
-        margin: auto;
+        margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
         flex-wrap: wrap;
@@ -835,7 +836,7 @@ header .sideNav {
         top: 22vh;
         width: 95%;
         min-height: 200vh;
-        margin: auto;
+        margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
         flex-wrap: wrap;
@@ -979,20 +980,20 @@ header .sideNav {
     /* ABOUT SECTION */
     .about {
         position: relative;
-        top: 7vh;
+        top: 0;
         left: 0;
         width: 100%;
         min-height: 100vh;
         padding-bottom: 5vh;
         overflow: visible;
-        margin-bottom: auto;
+        /* margin-bottom: auto; */
     }
     .about .about-me {
         position: relative;
         top: 10vh;
         width: 90%;
         min-height: 40vh;
-        margin: auto;
+        margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
         flex-direction: column;
@@ -1013,7 +1014,7 @@ header .sideNav {
     }
     .about .about-me .text {
         padding: 9rem 2rem 5rem 2rem;
-        margin: -9rem auto auto auto;
+        margin: -9rem auto 0 auto;
         width: 95%;
     }
     .about .about-me .text p {
@@ -1030,8 +1031,23 @@ header .sideNav {
     .cert-wrapper .center-line {
         left: 26px;
     }
+    /* .cert-wrapper {
+        border: green solid 2px;
+    } */
     .cert-wrapper .row {
         margin: 30px 0 3px 60px;
+    }
+    /* .cert-wrapper .row {
+        width: 90%;
+        top: 30px;
+        right: 2px;
+        bottom: 3px;
+        left: 60px;
+    } */
+    /* To compensate a strange gap caused by margin above */
+    .certificate, 
+    .resume {
+        top: -32px;
     }
     .cert-wrapper .row section {
         width: 100%;
@@ -1066,7 +1082,7 @@ header .sideNav {
     }
     .about .about-me .text {
         padding: 9rem 2rem 3rem 2rem;
-        margin: -8rem auto auto auto;
+        margin: -8rem auto 0 auto;
         width: 99%;
     }
     .about .about-me .avatar {
