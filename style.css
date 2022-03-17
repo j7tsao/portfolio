@@ -13,7 +13,9 @@ html {
 body {
     /* background-color: #1D212B; */
     background-color: #000;
-    min-height: 730vh;
+    height: auto;
+    min-height: 790vh;
+    
 }
 /* HEADER - NAVIGATION MENU */
 header {
