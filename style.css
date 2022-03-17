@@ -562,7 +562,7 @@ header .sideNav {
 .row section .cert-link a:hover {
     transform: scale(1.1);
     transition: all .4s ease-in-out;
-    background-color: #333;
+    background-color: #ff5733;
     color: #fff;
 }
 
@@ -625,6 +625,10 @@ header .sideNav {
     width: auto;
     /* border-radius: 5px; */
 }
+.resume .resume-wrapper .download-resume a:hover {
+    color: #fff;
+    background-color: #ff5733;
+}
 .resume .fa-angles-down {
     margin-right: 1rem;
     margin-top: 0.3rem;
@@ -677,6 +681,10 @@ header .sideNav {
     background-color: #c70039;
     color: #fff;
 }
+.resume .resume-wrapper .award-board .award-card .read-more:hover {
+    color: #fff;
+    background-color: #ff5733;
+}
 /* CONTACT SECTION */
 .contact {
     width: 100%;
@@ -718,6 +726,11 @@ header .sideNav {
     color: white;
     font-size: 2rem;
     margin: 1.5rem;
+}
+.contact .contact-wrapper .contact-icons .fa-brands:hover,
+.contact .contact-wrapper .contact-icons .fa-solid:hover {
+    color: #ff5733;
+    transform: scale(1.2);
 }
 /* FOOTER */
 .footer {
