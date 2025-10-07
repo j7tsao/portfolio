@@ -32,7 +32,7 @@ header {
 }
 header.sticky {
     padding: 6px 6vw;
-    background-color: #fff;
+    background-color: #141414;
     z-index: 2;
 }
 header.sticky .logo {
@@ -41,7 +41,7 @@ header.sticky .logo {
     color: #c70039;
 }
 header.sticky .topNav ul li a {
-    color: #000;
+    color: #fff;
 }
 header .logo {
     position: relative;
@@ -142,7 +142,7 @@ header .sideNav {
     position: relative;
     top: 0;
     left: 0;
-    background-color: #fafafa;
+    background-color: #1d1d1d;
     width: 100%;
     min-height: 80vh;
     padding-bottom: 5vh;
@@ -192,7 +192,7 @@ header .sideNav {
 }
 .about-section .about-me .text {
     position: relative;
-    background-color: rgba(212, 214, 214, 0.788);
+    background-color: #333333;
     padding: 5rem 9rem 5rem 13rem;
     overflow: visible;
     margin-left: -12rem;
@@ -212,6 +212,7 @@ header .sideNav {
     /* color:rgba(119, 117, 117, 0.822) */
 }
 .about-section .about-me .text p {
+    color: #fff;
     position: relative;
     text-align: justify;
     top: 1rem;
@@ -225,7 +226,7 @@ header .sideNav {
     position: relative;
     top: 0px;
     left: 0px;
-    background-color: #f5f5f5;
+    background-color: #262626;
     width: 100%;
     min-height: 300vh;
 }
@@ -281,46 +282,46 @@ header .sideNav {
     align-items: center;
     backface-visibility: hidden;
     transition: .8s ease-in-out;
-    border: #fff 1em solid;
+    border: #404040 1em solid;
 }
 .works-section .works-block .card .face.front {
-    color: #333;
+    color: #d2d2d2;
     transform-style: preserve-3d;
 }
 .works-section .works-block .card.card1 .face.front {
-    background-color: #e3e3e4;
+    background-color: #3D3D3D;
     background-image: url(assets/pietro.jpg);
     background-size: cover;
     background-blend-mode: overlay;
-    color: #555;
+    color: #d2d2d2;
 }
 .works-section .works-block .card.card2 .face.front {
-    background-color: #e3e3e4;
+    background-color: #3D3D3D;
     background-image: url(assets/surf.jpg);
     background-size: cover;
     background-blend-mode: overlay;
-    color: #555;
+    color: #d2d2d2;
 }
 .works-section .works-block .card.card3 .face.front {
-    background-color: #e3e3e4;
+    background-color: #3D3D3D;
     background-image: url(assets/beachS.jpg);
     background-size: cover;
     background-blend-mode: overlay;
-    color: #555;
+    color: #d2d2d2;
 }
 .works-section .works-block .card.card4 .face.front {
-    background-color: #e3e3e4;
+    background-color: #3D3D3D;
     background-image: url(assets/diego.jpg);
     background-size: cover;
     background-blend-mode: overlay;
-    color: #555;
+    color: #d2d2d2;
 }
 .works-section .works-block .card.card5 .face.front {
-    background-color: #e3e3e4;
+    background-color: #3D3D3D;
     background-image: url(assets/linkS.jpg);
     background-size: cover;
     background-blend-mode: overlay;
-    color: #555;
+    color: #d2d2d2;
 }
 .card.card1 .face.front::before,
 .card.card2 .face.front::before,
@@ -376,8 +377,8 @@ header .sideNav {
     font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     padding: 1rem;
     border-radius: 5px;
     text-align: center;
@@ -420,7 +421,7 @@ header .sideNav {
     /* transform: translate(-40%, -40%); */
     font-size: 80px;
     /* color: rgba(255, 0, 0, 0.712); */
-    color: #555;
+    color: #d2d2d2;
     transform: translateZ(9rem);
 }
 
@@ -431,7 +432,7 @@ header .sideNav {
     left: 0px;
     width: 100%;
     min-height: 120vh;
-    background-color: #fafafa;
+    background-color: #1d1d1d;
 }
 .certificate-section::before {
     position: absolute;
@@ -579,7 +580,7 @@ header .sideNav {
     position: relative;
     top: 0px;
     left: 0px;
-    background-color: #f5f5f5;
+    background-color: #1F1F1F;
     width: 100%;
     min-height: 110vh;
 }
@@ -652,7 +653,7 @@ header .sideNav {
 }
 .resume-section .resume-wrapper .award-board .award-card {
     position: relative;
-    background-color: #fff;
+    background-color: #0F0F0F;
     padding: 2.5rem;
     margin: 2rem;
     width: 500px;
@@ -672,13 +673,14 @@ header .sideNav {
     font-family: "Oswald", sans-serif;
     font-size: 1rem;
     margin-top: 1rem;
-    color: #333;
+    color: #C9C9C9;
 }
 .resume-section .resume-wrapper .award-board .award-card p {
     font-size: 1rem;
     letter-spacing: 1px;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    color: #C9C9C9;
 }
 
 .resume-section .resume-wrapper .award-board .award-card .read-more {
@@ -744,14 +746,14 @@ header .sideNav {
 .footer {
     width: 100%;
     height: 7vh;
-    background-color: #fff;
+    background-color: #141414;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 .footer .copyright {
     font-size: .9rem;
-    color: #000;
+    color: #fff;
     margin-right: 10%;
 }
 
