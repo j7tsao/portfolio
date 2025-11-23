@@ -99,3 +99,37 @@ flips5.forEach((flip) => {
         card5.classList.toggle("turn")
     })
 })
+
+// Typewriter effect
+function typeWriter(el, text, speed=100) {
+  el.textContent = "";
+  let i = 0;
+  function writer() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(writer, speed);
+    }
+  }
+  writer();
+}
+
+// observer for typewriter effect
+function setupTypewriterOnView(id) {
+  const el = document.getElementById(id);
+  const text = el.textContent;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        typeWriter(el, text);
+        observer.disconnect(); // Stop observing after animation starts
+      }
+    });
+  }, { threshold: 0.7 });
+  observer.observe(el);
+}
+
+// Initialize typewriter effects for each target element id
+setupTypewriterOnView('typewriter1');
+setupTypewriterOnView('typewriter2');
+setupTypewriterOnView('typewriter3');
