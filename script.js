@@ -115,9 +115,8 @@ function typeWriter(el, text, speed=100) {
 }
 
 // observer for typewriter effect
-function setupTypewriterOnView(id) {
+function setupTypewriterOnView(id, text) {
   const el = document.getElementById(id);
-  const text = el.textContent;
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -130,6 +129,9 @@ function setupTypewriterOnView(id) {
 }
 
 // Initialize typewriter effects for each target element id
-setupTypewriterOnView('typewriter1');
-setupTypewriterOnView('typewriter2');
-setupTypewriterOnView('typewriter3');
+text1 = "Jason Yuchi Tsao";
+text2 = "A few words about me";
+text3 = "As a self-starter, I am passionate about emerging technologies and constantly seek opportunities to learn and experiment with new tools. I am highly motivated to work efficiently and deliver results with quality and speed.";
+setupTypewriterOnView('typewriter1', text1);
+setupTypewriterOnView('typewriter2', text2);
+setupTypewriterOnView('typewriter3', text3);
