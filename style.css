@@ -170,6 +170,7 @@ header .sideNav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     /* border: rgb(196, 8, 8) solid 2px; */
     background-color: transparent;
     transition: all 2s ease;
@@ -199,6 +200,10 @@ header .sideNav {
     /* margin-bottom: auto; */
     min-height: 45vh;
     transition: all 2s ease;
+    /* Fill remaining row width from the first frame; min-width:0 avoids flex
+       intrinsic min-content growing with the typewriter paragraph. */
+    flex: 1 1 0%;
+    min-width: 0;
 }
 .about-section .about-me .text h2 {
     text-transform: uppercase;
@@ -219,6 +224,8 @@ header .sideNav {
     letter-spacing: 1.5px;
     line-height: 2em;
     transition: all 2s ease;
+    min-width: 0;
+    max-width: 100%;
 }
 
 /* WORKS SECTION */

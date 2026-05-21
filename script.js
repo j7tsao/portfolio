@@ -100,8 +100,8 @@ flips5.forEach((flip) => {
     })
 })
 
-// Typewriter effect
-function typeWriter(el, text, speed=100) {
+// Typewriter effect (optional onDone after the full string is shown)
+function typeWriter(el, text, speed = 100, onDone) {
   el.textContent = "";
   let i = 0;
   function writer() {
@@ -109,6 +109,8 @@ function typeWriter(el, text, speed=100) {
       el.textContent += text.charAt(i);
       i++;
       setTimeout(writer, speed);
+    } else if (typeof onDone === "function") {
+      onDone();
     }
   }
   writer();
@@ -128,10 +130,29 @@ function setupTypewriterOnView(id, text) {
   observer.observe(el);
 }
 
+// About: heading first, then body paragraph
+function setupAboutSectionTypewriter(headingText, bodyText) {
+  const headingEl = document.getElementById("typewriter2");
+  const bodyEl = document.getElementById("typewriter3");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          typeWriter(headingEl, headingText, 50, () => {
+            typeWriter(bodyEl, bodyText, 25);
+          });
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.7 }
+  );
+  observer.observe(headingEl);
+}
+
 // Initialize typewriter effects for each target element id
 text1 = "Jason Yuchi Tsao";
 text2 = "A few words about me";
 text3 = "As a self-starter, I am passionate about emerging technologies and constantly seek opportunities to learn and experiment with new tools. I am highly motivated to work efficiently and deliver results with quality and speed.";
 setupTypewriterOnView('typewriter1', text1);
-setupTypewriterOnView('typewriter2', text2);
-setupTypewriterOnView('typewriter3', text3);
+setupAboutSectionTypewriter(text2, text3);
