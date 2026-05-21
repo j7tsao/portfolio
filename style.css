@@ -14,7 +14,6 @@ body {
     /* background-color: #1D212B; */
     background-color: #000;
     height: auto;
-    min-height: 810vh;
     margin: 0;
 }
 /* HEADER - NAVIGATION MENU */
@@ -28,10 +27,12 @@ header {
     align-items: center;
     transition: 0.6s;
     /* padding: 40px 100px; */
-    padding: 3vw 6vw;
+    /* Right inset matches .banner-text / .banner-quote (right: 9%) so nav
+       stays over the coffee photo instead of past it when bg is contain+center. */
+    padding: 3vw 9% 3vw 6vw;
 }
 header.sticky {
-    padding: 6px 6vw;
+    padding: 6px 9% 6px 6vw;
     background-color: #141414;
     z-index: 2;
 }
@@ -235,7 +236,7 @@ header .sideNav {
     left: 0px;
     background-color: #262626;
     width: 100%;
-    min-height: 300vh;
+    min-height: 220vh;
 }
 .works-section::before {
     position: absolute;
@@ -255,9 +256,9 @@ header .sideNav {
 }
 .works-section .works-block {
     position: relative;
-    top: 22vh;
+    top: 18vh;
     width: 80%;
-    min-height: 200vh;
+    min-height: 155vh;
     margin: 0 auto;
     /* border: green 2px solid; */
     display: flex;
@@ -438,7 +439,7 @@ header .sideNav {
     top: 0px;
     left: 0px;
     width: 100%;
-    min-height: 120vh;
+    min-height: 88vh;
     background-color: #1d1d1d;
 }
 .certificate-section::before {
@@ -458,7 +459,7 @@ header .sideNav {
     /* color:rgba(119, 117, 117, 0.822) */
 }
 .cert-wrapper {
-    top: 24vh;
+    top: 17vh;
     width: 80%;
     margin: 0 auto;
     position: relative;
@@ -589,27 +590,11 @@ header .sideNav {
     left: 0px;
     background-color: #1F1F1F;
     width: 100%;
-    min-height: 110vh;
-}
-.resume-section::before {
-    position: absolute;
-    content: "resume";
-    left: 50%;
-    transform: translateX(-50%);
-    top: 4rem;
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 1.7rem;
-    font-weight: 500;
-    letter-spacing: 4px;
-    color: #808080fd;
-    transition: all 2s ease;
-    /* color: #c70039; */
-    /* color:rgba(119, 117, 117, 0.822) */
+    min-height: 88vh;
 }
 .resume-section .resume-wrapper {
     position: relative;
-    top: 24vh;
+    top: 14vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -622,7 +607,7 @@ header .sideNav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7rem;
+    width: auto;
 }
 .resume-section .resume-wrapper .download-resume a {
     display: flex;
@@ -645,13 +630,13 @@ header .sideNav {
     color: #fff;
     background-color: #ff5733;
 }
-.resume-section .fa-angles-down {
-    margin-right: 1rem;
-    margin-top: 0.3rem;
+.resume-section .download-resume .fa-file-pdf {
+    margin-right: 0.65rem;
+    margin-top: 0.15rem;
 }
 .resume-section .resume-wrapper .award-board {
     position: relative;
-    top: 10vh;
+    top: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -806,13 +791,13 @@ header .sideNav {
     }
     /* WORKS SECTION */
     .works-section {
-        min-height: 310vh;
+        min-height: 248vh;
     }
     .works-section .works-block {
         position: relative;
-        top: 22vh;
+        top: 18vh;
         width: 95%;
-        min-height: 200vh;
+        min-height: 158vh;
         margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
@@ -830,9 +815,9 @@ header .sideNav {
 @media (max-width: 1210px) {
     .works-section .works-block {
         position: relative;
-        top: 22vh;
+        top: 18vh;
         width: 95%;
-        min-height: 200vh;
+        min-height: 158vh;
         margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
@@ -848,7 +833,7 @@ header .sideNav {
     }
     /* RESUME SECTION */
     .resume-section {
-        min-height: 180vh;
+        min-height: 132vh;
     }
     .resume-section .resume-wrapper .award-board {
         flex-direction: column;
@@ -856,16 +841,16 @@ header .sideNav {
 }
 @media (max-width: 1090px) {
     .works-section {
-        min-height: 450vh;
+        min-height: 340vh;
     }
     .works-section::before {
         font-size: 1.5rem;
     }
     .works-section .works-block {
         position: relative;
-        top: 22vh;
+        top: 18vh;
         width: 95%;
-        min-height: 200vh;
+        min-height: 165vh;
         margin: 0 auto;
         /* border: green 2px solid; */
         display: flex;
@@ -881,10 +866,6 @@ header .sideNav {
     }
     /* CERTIFICATE SECTION */
     .certificate-section::before {
-        font-size: 1.5rem;
-    }
-    /* RESUME SECTION */
-    .resume-section::before {
         font-size: 1.5rem;
     }
     /* CONTACT SECTION */
@@ -1122,7 +1103,7 @@ header .sideNav {
     }
     /* WORK SECTION */
     .works-section {
-        min-height: 400vh;
+        min-height: 305vh;
     }
     .works-section .works-block {
         width: 100%;
@@ -1136,17 +1117,13 @@ header .sideNav {
     }
     /* CERTIFICATE SECTION */
     .certificate-section {
-        min-height: 130vh;
+        min-height: 100vh;
     }
     .certificate-section::before {
         font-size: 1.3rem;
     }
     .row section .cert-link a {
         font-size: .9rem;
-    }
-    /* RESUME SECTION */
-    .resume-section::before {
-        font-size: 1.3rem;
     }
     .row section .details .cert-title,
     .row section .details .cert-date {
@@ -1213,7 +1190,7 @@ header .sideNav {
     }
     /* CERTIFICATE SECTION */
     .certificate-section {
-        min-height: 130vh;
+        min-height: 100vh;
     }
     .cert-wrapper .center-line,
     .cert-wrapper .row section::before,
